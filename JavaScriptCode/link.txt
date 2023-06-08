@@ -3,3 +3,4 @@ this in arrow: https://www.codementor.io/@dariogarciamoya/understanding-this-in-
 hoisting: https://www.digitalocean.com/community/tutorials/understanding-hoisting-in-javascript
 shallow vs deep copy
 slice vs splice vs substring
+expots vs mpdule.exports: https://www.scaler.com/topics/nodejs/module-exports-vs-exports/
