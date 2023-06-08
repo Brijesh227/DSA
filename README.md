@@ -1,1 +1,1 @@
-This repositor contains notes and boiler code of DSA
+This repository contains notes and boiler code of DSA.

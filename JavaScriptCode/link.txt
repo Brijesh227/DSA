@@ -1,0 +1,5 @@
+this in javascript: https://www.codementor.io/@dariogarciamoya/understanding--this--in-javascript-du1084lyn
+this in arrow: https://www.codementor.io/@dariogarciamoya/understanding-this-in-javascript-with-arrow-functions-gcpjwfyuc
+hoisting: https://www.digitalocean.com/community/tutorials/understanding-hoisting-in-javascript
+shallow vs deep copy
+slice vs splice vs substring
