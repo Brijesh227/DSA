@@ -294,15 +294,121 @@ function print18(n){                                   //    A
 }
 
 function print19(n){                                // C
-    let charCode = 'C'.charCodeAt(0);               // B C
+    let charCode = 'E'.charCodeAt(0);               // B C
     for(let row=0;row<n;++row){                     // A B C
         for(let col=0;col<=row;++col) {
-            str+= String.fromCharCode(charCode);
+            str+= String.fromCharCode(charCode+col);
         }
-        ++charCode;
+        --charCode;
         str+="\n";
     }
     return str;
 }
 
-console.log(print19(3));
+function print20(n){                                // **********
+    for(let row=0;row<n;++row){                     // ****  ****
+        if(row<n/2){                                // ***    ***
+            star = n/2-row;                         // **      **
+            for(let col=0;col<star;++col) {         // *        *
+                str+="*";                           // *        *
+            }                                       // **      **
+            for(let space=0;space<2*row;++space){   // ***    ***
+                str+=" ";                           // ****  ****
+            }                                       // **********
+            for(let col=0;col<star;++col){
+                str+="*";
+            }
+        } else {
+            star = row-(n/2)+1;
+            for(let col=0;col<star;++col){
+                str+="*";
+            }
+            for(let space =0;space<n-2*star;++space){
+                str+=" ";
+            }
+            for(let col=0;col<star;++col){
+                str+="*";
+            }
+        }
+        str+="\n";
+    }
+    return str;
+}
+
+function print21(n) {                   // *        *
+    for(let row=1;row<=n;++row){        // **      **
+        let space = 2*(n-row);          // ***    ***
+        for(let col=0;col<row;++col){   // ****  ****        
+            str+="*";                   // **********
+        }                               // ****  ****
+        for(let col=0;col<space;++col){ // ***    ***
+            str+= " ";                  // **      **
+        }                               // *        *      
+        for(let col=0;col<row;++col){
+            str+="*";
+        }
+        str+="\n";
+    }             
+    for(let row=n-1;row>0;--row){         
+        let space = 2*(n-row);
+        for(let col=0;col<row;++col){                
+            str+="*";
+        }
+        for(let col=0;col<space;++col){
+            str+= " ";
+        }
+        for(let col=0;col<row;++col){
+            str+="*";
+        }
+        str+="\n";
+    }
+    return str;
+}
+
+function print22(n){                                //*****
+    // for(let row=1;row<=n;++row){                 //*   *
+    //     if(row === 1 || row === n){              //*   *
+    //         for(let col=0;col<n;++col){          //*   *
+    //             str+="*";                        //*****
+    //         }                                    
+    //     }else {
+    //         str+="*";
+    //         for(let space=0;space<n-2;++space){
+    //             str+=" ";
+    //         }
+    //         str+="*";
+    //     }
+    //     str+="\n";
+    // }
+
+    //OR
+
+    for(let row=0;row<n;++row){
+        for(let col = 0;col<n;++col){
+            if(row === 0 || row === n-1 || col === 0 || col === n-1){
+                str+="*";
+            } else {
+                str+=" ";
+            }
+        }
+        str+="\n";
+    }
+    return str;
+}
+
+function print23(n) {
+    let iteration = 2*n-1;
+    for(let row=0;row<iteration;++row){
+        for(let col=0;col<iteration;++col){
+            if(row === 0 || row === iteration-1 || col === 0 || col === iteration-1){
+                str+=n;
+            } else if(row === 1 || col === 1 || row === iteration -1 || col === iteration - n-1) {
+                str+=n-1;
+            }
+        }
+        str+="\n";
+    }
+    return str;
+}
+
+console.log(print23(4));
