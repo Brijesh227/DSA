@@ -396,17 +396,17 @@ function print22(n){                                //*****
     return str;
 }
 
-function print23(n) {                       // 4444444
-    let iteration = 2*n-1;                  // 4333334
-    for(let row=0;row<iteration;++row){     // 4322234
-        for(let col=0;col<iteration;++col){ // 4321234
-            let top = row;                  // 4322234
-            let bottom = iteration-1-row;   // 4333334
-            let left = col;                 // 4444444
-            let right = iteration-1-col;    
-            str+=n-Math.min(Math.min(top,bottom),Math.min(left,right))
+function print23(n) {
+    let iteration = 2*n-1;
+    for(let row=0;row<iteration;++row){
+        for(let col=0;col<iteration;++col){
+            if(row === 0 || row === iteration-1 || col === 0 || col === iteration-1){
+                str+=n;
+            } else if(row === 1 || col === 1 || row === iteration -1 || col === iteration - n-1) {
+                str+=n-1;
+            }
         }
-        str+="\n"
+        str+="\n";
     }
     return str;
 }
