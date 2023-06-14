@@ -118,4 +118,16 @@ function sieveOfEratorthenes(n){
     }
 }
 
-sieveOfEratorthenes(5);
+// sieveOfEratorthenes(5);
+
+function checkPrime(n){
+    for(let i=2;i*i<=n;++i){
+        if(n%i === 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+// console.log(checkPrime(3) ? "is prime" : "is not prime");
+
