@@ -14,10 +14,8 @@ function printAllDivisor(n){
 // console.log(printAllDivisor(12));
 
 function printGCDORHCF(n1,n2) {
-    const factorOfN1 = printAllDivisor(n1);
-    const factorOfN2 = printAllDivisor(n2);
-    console.log("n1",factorOfN1);
-    console.log("n2",factorOfN2);
+    //const factorOfN1 = printAllDivisor(n1);
+    //const factorOfN2 = printAllDivisor(n2);
     //let max = Number.MIN_VALUE;
     // for(let i=0;i<factorOfN1.length;++i){
     //     for(let j=0;j<factorOfN2.length;++j){
@@ -27,12 +25,35 @@ function printGCDORHCF(n1,n2) {
     //     }
     // }
     // return max;
-
     // OR
+    // return Math.max(...factorOfN1.filter((num) => factorOfN2.includes(num)));
 
-    console.log(factorOfN1.filter((num) => factorOfN2.includes(num)));
-    return Math.max(...factorOfN1.filter((num) => factorOfN2.includes(num)));
-    
+    //OR
+
+    for(let i = Math.min(n1,n2);i>=1;--i){
+        if((n1 % i === 0) && (n2 % i === 0)){
+            return i;
+        }
+    }
+}
+// console.log(printGCDORHCF(9,12));
+
+function printGCDUsingEuclideanAlgorithm(n1,n2){
+    // if(n1 === 0){
+    //     return n2;
+    // }
+    // return printGCDUsingEuclideanAlgorithm(Math.abs(n1-n2),Math.min(n1,n2));
+
+    //OR
+
+    while(n1 > 0 && n2 > 0){
+        if(n1 > n2) {
+            n1 = n1 % n2;
+        } else {
+            n2 = n2 % n1;
+        }
+    }
+    return n1 === 0 ? n2 : n1;
 }
 
-console.log(printGCDORHCF(20,40));
+console.log(printGCDUsingEuclideanAlgorithm(52,10));  //log(theta)^min(n1,n2)
