@@ -15,13 +15,30 @@ function insertion(arr,i,j){
     return arr;
 }
 
-function sort(arr){
-    for(let i=0;i<arr.length-1;++i){
-        for(let j=i+1;j<arr.length;++j){
-            arr = insertion(arr,i,j);
+// function insertionSort(arr){
+//     for(let i=0;i<arr.length-1;++i){
+//         for(let j=i+1;j<arr.length;++j){
+//             arr = insertion(arr,i,j);
+//         }
+//     }
+//     console.log("arr",arr);
+// }
+
+
+// OR
+
+function insertionSort(arr){
+    for(let i=1;i<arr.length;++i){
+        let j=i-1;
+        let swapindex = i;
+        while(j>=0){
+            if(arr[j]>arr[swapindex]){
+                swapElement(arr,j,swapindex);
+            }
+            --j;
+            --swapindex;
         }
     }
-    console.log("arr",arr);
 }
 
-sort([12,11,13,5,6]);
+insertionSort([12,11,13,5,6]); // O(N^2)
