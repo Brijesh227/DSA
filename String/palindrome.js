@@ -1,4 +1,4 @@
-let str = "121";
+let str = "abba";
 
 function checkPalindrome(str) {
     for(let i = 0;i<Math.floor(str.length/2);++i){
