@@ -15,4 +15,17 @@ function bubble(arr){
     console.log("arr",arr);
 }
 
+//OR
+
+function bubble(arr){
+    for(let i=0;i<arr.length-1;++i){
+        for(let j=0;j<arr.length-i-1;++j){
+            if(arr[j] > arr[j+1]){
+                swapElement(arr,j,j+1);
+            }
+        }
+    }
+    console.log("arr",arr);
+}
+
 bubble([12,11,13,5,6])

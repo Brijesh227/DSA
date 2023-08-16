@@ -3,23 +3,24 @@ Given a non-empty array, return true if there is a place to split the array so t
 */
 
 function canBalance(arr) {
+    let sum = arr.reduce((curr,acc) => acc+curr);
+    let rightSum = 0;
     for(let i=0;i<arr.length;++i){
-        let leftsum = 0;
-        
-        let rightsum =0 ;
-        for(let j=i+1;j<arr.length;++j){
-            rightsum+=j;
+        rightSum += arr[i];
+        if((sum - arr[i]) == rightSum){
+            return true;
         }
-        if(arr[i] < sum){
-            ++i
-        }
+        sum-=arr[i];
     }
+    return false;
 }
 console.log(canBalance([1, 1, 1, 2, 1]));  
+// true
+console.log(canBalance([5, 1, 1, 2, 1]));  
 // true
 console.log(canBalance([2, 1, 1, 2, 1]));     
 // false
 console.log(canBalance([10,10]));           
-true
+// true
 console.log(canBalance([1,2,3,4,10]));
-true
+// true

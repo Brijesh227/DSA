@@ -40,52 +40,10 @@
 // }
 // hello();
 
-// var a = 10;
-// var b = 20;
-// function add() {
-//     console.log(this.a);
-//     console.log(b);
-//     return this.a + b;
-// }
-// const add2 = () => {
-//     console.log(this.a);
-//     console.log(b);
-//     return this.a + b;
-// }
-// const obj = {
-//     a: -10,
-//     b: -20,
-//     // add() {
-//     //     return this.a + b;
-//     // },
-//     // add2: () => {
-//     //     return this.a + b;
-//     // }
-// }
-// obj.add = add;
-// obj.add2 = add2;
-// console.log("add",add());
-// console.log("add2",add2());
-// console.log("obj add",obj.add());
-// console.log("obj2 add2",obj.add2());
-
 // function hello(){
 //     console.log(this);
 // }
 // hello();
-
-// const obj = {
-//     a: "10",
-//     b: "20",
-//     getA: () => {
-//         return this.a;
-//     },
-//     getB: function() {
-//         return this.b;
-//     }
-// }
-// console.log(obj.getA());
-// console.log(obj.getB());
 
 // function createBase(base){
 //     return function(n) {
@@ -96,13 +54,13 @@
 // var add = createBase(6);
 // add(10);
 
-var b= 10;
-{
-    let b= 100;
-    console.log("in",b);
-}
-console.log("out",b);
-console.log("out this",this.b);
+// var b= 10;
+// {
+//     let b= 100;
+//     console.log("in",b);
+// }
+// console.log("out",b);
+// console.log("out this",this.b);
 
 // let b= 10;
 // function show(){
@@ -136,12 +94,12 @@ console.log("out this",this.b);
 // b();
 // console.log(a);
 
-function check() {
-    glob = 10;
-    // var glob = 20;
-}
-check();
-console.log(glob);
+// function check() {
+//     glob = 10;
+//     // var glob = 20;
+// }
+// check();
+// console.log(glob);
 
 // {
 //     glob = 20;
