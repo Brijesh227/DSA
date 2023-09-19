@@ -1,6 +1,3 @@
-arr = [1,2,3];
-console.log(arr);
-
 const categories = [
     {
         code: 1,
@@ -31,7 +28,6 @@ const categories = [
     const res = {};
      for(let item of categories){
          if(item.parent){
-             res[item] = 
          }
      }
  }
