@@ -4,3 +4,4 @@ hoisting: https://www.digitalocean.com/community/tutorials/understanding-hoistin
 shallow vs deep copy
 slice vs splice vs substring
 expots vs module.exports: https://www.scaler.com/topics/nodejs/module-exports-vs-exports/
+setTimeout() and Promise Example: https://www.encora.com/insights/javascript-settimeout-and-promise-under-the-hood

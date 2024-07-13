@@ -1,3 +1,19 @@
+/*
+    Everything in js is Object 
+    why?
+        const arr= [];
+        console.log(arr)        // arr: 
+                                    __proto__ : Array {
+                                        it has all methods and properties inherit from Array prototype has 
+                                        like push, pop, map, filter, reduce, etc.
+                                        __proto__ : Object { ... }
+                                    }
+
+    Prototype property does not belongs to variable or instance or object it only belongs to Class and Constructor function.
+
+*/
+
+
 const obj1 = {
     talk(){
         console.log("talking");
@@ -22,11 +38,11 @@ class Person {
 }
 
 const me = new Person();
-me.talk();
+me.talk();                  //talking
 
-console.log(me) // Person { __proto__: 
-                            //  talk: f talk()
-                            //    constructor: class Person 
+console.log(me)         // Person { __proto__: 
+                        //   talk: f talk()
+                        //   constructor: class Person 
                         //}
 console.log(Person.prototype) // { constuctor: class Person, 
                               //      talk: f, 
@@ -103,5 +119,23 @@ Object.setPrototypeOf(me, person);
 me.talk(); // Talking
 
 
+// __proto__ vs prototype
+
 const hello = {};
-console.log(hello);  { __proto__: Object }
+console.log(hello);   // { __proto__: Object }   
+    /*
+        hello: { __proto__: Object }  ------> Object.prototype = {
+                                                    __defineGetter__: f,
+                                                    __defineSetter__: f,
+                                                    __lookupGetter__: f,
+                                                    __lookupSetter__: f,
+                                                    constructor: f,
+                                                    hasOwnProperty: f,
+                                                    isPrototypeOf: f,
+                                                    propertyIsEnumerable: f,
+                                                    toLocaleString: f,
+                                                    toString: f,
+                                                    valueOf: f
+                                                }
+        }
+    */
