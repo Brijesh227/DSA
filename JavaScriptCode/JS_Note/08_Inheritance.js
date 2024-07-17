@@ -1,16 +1,15 @@
 /*
-    Everything in js is Object 
-    why?
+    Everything in js is Object (Prototyple inheritance)
+    How?
         const arr= [];
         console.log(arr)        // arr: 
                                     __proto__ : Array {
-                                        it has all methods and properties inherit from Array prototype has 
+                                        it inherit all methods and properties from Array prototype has.
                                         like push, pop, map, filter, reduce, etc.
                                         __proto__ : Object { ... }
                                     }
 
     Prototype property does not belongs to variable or instance or object it only belongs to Class and Constructor function.
-
 */
 
 
@@ -37,19 +36,25 @@ class Person {
     }
 }
 
-const me = new Person();
-me.talk();                  //talking
+const me2 = new Person();
+me2.talk();                  // talking
 
-console.log(me)         // Person { __proto__: 
-                        //   talk: f talk()
-                        //   constructor: class Person 
-                        //}
-console.log(Person.prototype) // { constuctor: class Person, 
-                              //      talk: f, 
-                              //      __proto__ 
-                              // }
+console.log(me2)            /* Person { 
+                                __proto__: {
+                                    constructor: class Person, 
+                                    talk: f talk(),
+                                    __proto__: Object
+                                } 
+                            } */
+console.log(Person.prototype)   /* { 
+                                    constuctor: class Person, 
+                                    talk: f, 
+                                    __proto__ : Object
+                                } 
+                                */
 
-Person.prototype === me.__proto__    // true
+Person.prototype === me2.__proto__    // true
+
 
 // ------ Function based Inheritance -------
 
@@ -60,13 +65,13 @@ function Person() {
     }
 }
 const pme = new Person();
-console.log(pme) // Person { 
-                 //       talk: f(), 
-                 //       __proto__: { 
-                 //           constuctor: f Person(), 
-                 //       }
-                 //   }
-
+console.log(pme)    /* Person { 
+                        talk: f(), 
+                        __proto__: { 
+                            constuctor: f Person(),
+                            __proto__: Object
+                        }
+                    } */
 console.log(pme.talk())                 // talking
 console.log(Person.prototype.talk())    // undefined
 console.log(Person.talk())              // undefined
@@ -99,17 +104,17 @@ Person.prototype.walk = function(){
 }
 
 
-// ------------ Inheritance using pure objects with Object.create
-const person = {
+// ------- Inheritance using pure objects with Object.create ------
+const personCreate = {
   talk() {
     return 'Talking';
   }
 }
-const me = Object.create(person);
-me.talk(); // Talking
+const meCreate = Object.create(personCreate);
+meCreate.talk(); // Talking
   
   
-// ------------ Inheritance using pure objects with Object.setPrototypeOf
+// ------- Inheritance using pure objects with Object.setPrototypeOf -----
 const person = {}
 person.__proto__.talk = function (){
   return 'Talking';
@@ -125,17 +130,16 @@ const hello = {};
 console.log(hello);   // { __proto__: Object }   
     /*
         hello: { __proto__: Object }  ------> Object.prototype = {
-                                                    __defineGetter__: f,
-                                                    __defineSetter__: f,
-                                                    __lookupGetter__: f,
-                                                    __lookupSetter__: f,
-                                                    constructor: f,
-                                                    hasOwnProperty: f,
-                                                    isPrototypeOf: f,
-                                                    propertyIsEnumerable: f,
-                                                    toLocaleString: f,
-                                                    toString: f,
-                                                    valueOf: f
-                                                }
-        }
+                                                __defineGetter__: f,
+                                                __defineSetter__: f,
+                                                __lookupGetter__: f,
+                                                __lookupSetter__: f,
+                                                constructor: f,
+                                                hasOwnProperty: f,
+                                                isPrototypeOf: f,
+                                                propertyIsEnumerable: f,
+                                                toLocaleString: f,
+                                                toString: f,
+                                                valueOf: f
+                                            }
     */
