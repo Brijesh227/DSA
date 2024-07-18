@@ -12,7 +12,8 @@
                 const me = createPerson("ji");
                 me.name = "notji";             // not allowed because me doesn't have name property.
 
-    Use constructor function if you want to use inheritance. === class in JS(both has same fundamentals - prototypal Inheritance)
+    Use constructor function if you want to use inheritance. 
+        Constructor function === class (both has same fundamentals - prototypal Inheritance)
 */
 
 // code duplication
@@ -66,7 +67,7 @@ me3.talk();                         // Hi, I am bir
 */
 
 
-// ------ Constructor Function --------  (class has same fundamental applies to constructor fun)
+// ------ Constructor Function --------  (class has same fundamental applies to constructor function)
 
 /*
     Person become actual type,
@@ -101,11 +102,11 @@ console.log(Person.prototype);          /* {
                                          } */
 console.log(Person.prototype.name);     // undefined 
 console.log(Person.prototype.talk());   // TypeError: Person.prototype.talk is not a function
+console.log(pme.prototype)              // undefined
+console.log(Person.prototype === me.__proto_);  // true
 
-/*  pme.prototype  // undefined
-    Person.prototype === me.__proto__  => true
-
-    where this refer:
+/*  
+    where this refer in factory fucntion:
         In a method defined within an object, this refers to the object that owns the method. When you create an instance of Person with new, this within the constructor function and the methods of the instance refers to the new instance being created, not the window object.
     
     What "new" keyword does internally when new Person("hi"):

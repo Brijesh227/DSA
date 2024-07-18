@@ -1,5 +1,3 @@
-
-
 // getName();                   //hello
 // getName2();                  //hello undefined
 // arrGetNameFunExpression();  //TypeError: arrGetNameFunExpression is not a function
@@ -12,19 +10,15 @@ var x = 7;
 function getName() {
     console.log("hello");
 }
-
 function getName2() {
     console.log("hello",x);
 }
-
 var arrGetNameFunExpression = function () {                         //Function Expression
     console.log("hello from arrow function expression getname",x);
 }
-
 var arrGetName = () => {                                            //Arrow Function
     console.log("hello from arrow getname",x);
 }
-
 let arrGetName2 = () => {
     console.log("hello from arrow getname",x);
 }

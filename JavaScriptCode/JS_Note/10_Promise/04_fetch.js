@@ -1,16 +1,20 @@
 const cartItem = () => {
-    return fetch('https://dummyjson.com/carts/1')
-                    .then(res => res.json())
-                    .then(res => res)
-                    .catch(err => console.log(err));
+    return fetch('https://dummyjson.com/carts')
+            .then(res => res.json())
+            .catch(err => console.log(err));
 }
 
-const data = cartItem().then(data =>{
-    console.log('data then',data);
-    return data;
-});
+const data = cartItem()
+                .then(data => {
+                    console.log('data then',data);
+                    return data;
+                });
 
-console.log('data',data);
+console.log('data',data);                           
+
+/*  data Promise { <pending> }
+    data then { ... }            
+*/
 
 // const fetchData = () => {
 //     return fetch('https://dummyjson.com/carts/1')
@@ -41,6 +45,8 @@ console.log('data',data);
 
 // data = processData();
 // console.log('data',data);
+
+
 
 // async function fetchdata(){
 //     try {
