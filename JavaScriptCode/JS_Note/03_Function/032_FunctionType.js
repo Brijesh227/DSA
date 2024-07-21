@@ -1,6 +1,7 @@
-// https://www.youtube.com/watch?v=fbuyliXlDGI&list=PL1PqvM2UQiMoGNTaxFMSK2cih633lpFKP&index=5
+/* 
+    factory vs construcor function: https://www.youtube.com/watch?v=fbuyliXlDGI&list=PL1PqvM2UQiMoGNTaxFMSK2cih633lpFKP&index=5
+    this with arrow: https://www.youtube.com/watch?v=ajTvmGxWQF8&list=PL1PqvM2UQiMoGNTaxFMSK2cih633lpFKP&index=7
 
-/*
     For data privacy use factory function, no one can change name.
         eg.,    function createPerson(name) {
                     return {
@@ -14,6 +15,30 @@
 
     Use constructor function if you want to use inheritance. 
         Constructor function === class (both has same fundamentals - prototypal Inheritance)
+
+    // Annonymous function -  generally used as function expression
+    funcion(){
+        console.log("talking");
+    }
+
+    // callback function
+    setTimeout(function() {
+        console.log("talking");
+    }, 1000);
+
+    // Named function
+        - factory function
+        - constructor function
+
+    // Object methods
+        const me = {
+            sayHello: function() {}
+        } 
+    
+    // Arrow function
+        setTimeout(() => {
+            console.log("talking");
+        }, 1000);
 */
 
 // code duplication
@@ -80,6 +105,7 @@ me3.talk();                         // Hi, I am bir
 */
 function Person(name) { 
     this.name = name;
+    console.log(this);                  // Person { name: "ji", talk: f, talkWithThis : f, __proto__: Object }
     this.talk = function() {
         console.log("talking", name);
     };
@@ -119,6 +145,7 @@ console.log(Person.prototype === me.__proto_);  // true
 
 
 // ------ Arrow Function ----------
+
 const addTwo = (num1, num2) => {
     return num1 + num2
 }
@@ -128,3 +155,48 @@ const addTwoImplicitReturnWithBraces = (num1, num2) => ( num1 + num2 )        //
 const addTwoImplicitReturnObject = (num1, num2) => ({username: "hitesh", age: num1 + num2 })
 
 console.log(addTwo(3, 4));
+
+/* Do not use arrow fuction in
+     1. Constructor Function
+        const Person = (n) => {
+            this.name = n;
+        }
+        const me = new Person('sina')   // TypeError: Person is not a constructor
+     2. Method in object
+
+        const me = {
+            talk: () => {
+                console.log("talking");
+            }
+        }
+        // above is fine 
+
+        const obj = {
+            name: "ji",
+            hello: function() {
+                console.log(this);      // {name: "ji", hello: ƒ} 
+            },
+            arrHello: () => {
+                console.log(this);      // Window
+            }
+        }
+        // but when you want to access this it's problematic
+
+     3. Constructor in class and prototype method
+        const Person = () => {
+
+        }
+        const me = new Person()     // TypeError: Person is not a constructor
+        
+        --- and -----
+
+        function Person (n) {
+            this.n = n;
+        }
+        const me = new Person("ji")
+        Person.prototy.talk = () => {
+            console.log(this);        // Window
+        }
+    
+    4. Event handlers
+*/

@@ -2,7 +2,7 @@
 // const Fuse = require('fuse.js');
 // const app= exppress();
 
-const { default: axios } = require("axios");
+// const { default: axios } = require("axios");
 
 // app.use(exppress.json());
 // const books = [{
@@ -81,25 +81,56 @@ const { default: axios } = require("axios");
 // })
 
 
-async function getData() {
-    try{
-        console.log("hello");
-        await getTitle();
-        console.log("hello 2");
-    } catch(err){
-        console.log("data err",err)
-    }
-}
+// async function getData() {
+//     try{
+//         console.log("hello");
+//         await getTitle();
+//         console.log("hello 2");
+//     } catch(err){
+//         console.log("data err",err)
+//     }
+// }
 
-async function getTitle() {
-    await axios.get("https://jsonplaceholder.typicode.com/post/1")
-    .then(res => {
-        console.log("res",res.data)
-    })
-    .catch(err => {
-        console.log("title err",err);
-        throw err;
-    })
-}
+// async function getTitle() {
+//     await axios.get("https://jsonplaceholder.typicode.com/post/1")
+//     .then(res => {
+//         console.log("res",res.data)
+//     })
+//     .catch(err => {
+//         console.log("title err",err);
+//         throw err;
+//     })
+// }
 
-getData();
+// getData();
+
+function hello() {
+    let username = "hello";
+    console.log(this);             /*                                       
+                                       Node environment:
+                                           <ref *1> Object [global] {
+                                              global: [Circular *1],
+                                              queueMicrotask: [Function: queueMicrotask],
+                                              clearImmediate: [Function: clearImmediate],
+                                              setImmediate: [Function: setImmediate] {
+                                                [Symbol(nodejs.util.promisify.custom)]: [Getter]
+                                              },
+                                              structuredClone: [Getter/Setter],
+                                              clearInterval: [Function: clearInterval],
+                                              clearTimeout: [Function: clearTimeout],
+                                              setInterval: [Function: setInterval],
+                                              setTimeout: [Function: setTimeout] {
+                                                [Symbol(nodejs.util.promisify.custom)]: [Getter]
+                                              },
+                                              atob: [Getter/Setter],
+                                              btoa: [Getter/Setter],
+                                              performance: [Getter/Setter],
+                                              fetch: [AsyncFunction: fetch]
+                                           }                              
+                                       Browser environment:
+                                           Window
+                                   */
+    console.log(username);         // hello
+    console.log(this.username);    // undefined (this refer to global context)
+}
+hello();

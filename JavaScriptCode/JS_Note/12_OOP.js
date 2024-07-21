@@ -34,10 +34,10 @@ const user = {
 
 //console.log(user.username)
 //console.log(user.getUserDetails());
-// console.log(this);
 
 
 function User(username, loginCount, isLoggedIn){
+    // const this = {};             internallu does this when new is called
     this.username = username;
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn
@@ -47,10 +47,10 @@ function User(username, loginCount, isLoggedIn){
 
     }
 
-    return this
+    // return this;                  internally does this when new is called
 }
 
 const userOne = new User("hitesh", 12, true)
 const userTwo = new User("ChaiAurCode", 11, false)
-console.log(userOne.constructor);
+console.log(userOne.constructor);       // [Function: User]
 //console.log(userTwo);

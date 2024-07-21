@@ -8,6 +8,12 @@
 
 // Is let and const variable declaration hoisted? -> yes it's hoisted they keep in temporal dead zone.
 
+/**
+    In Global Scope:
+        Script:
+
+*/
+
 
 // -------TEMPORAL DEADZONE AND REFERENCE ERROR----------
 
@@ -42,11 +48,11 @@ let e = 10;                 // SytaxError: Identifier 'e' has already been decla
 //------------
 var c = 10;
 var c = 100;                // It's fine. both is valid
-console.log(c,this.c);             // 100 100
+console.log(c,this.c);      // 100 100
 c = 1;
-console.log(c,this.c);             // 1 1
+console.log(c,this.c);      // 1 1
 
-let f=10;
+let f = 10;
 f = 100;                    // It's fine. both is valid
 console.log(f,this.f);      // 100 undefined
 
@@ -54,10 +60,38 @@ console.log(f,this.f);      // 100 undefined
 // -------TYPE ERROR-------
 
 const d = 100;
-d = 10;                     //TypeError: Assignment to constant variable.
+d = 10;                     // TypeError: Assignment to constant variable.
 
 
 // ------------
 
 z = 1;
 console.log(z,this.z);             // 1 1
+
+// ------------ scope in function --------
+let c = 10;
+var e = 20;
+
+/* source tab of browser:
+    Script:
+        c: undefined,      Temporal Dead zone
+            aftersome time when let c = 10 is executed
+        c: 10              still inside Script but not in temporal dead zone.
+
+    Global:
+        e: undefined, 
+*/
+
+function hi() {
+  let a = 1;
+  var b = 9;
+}
+  
+/* source tab of browser:
+    Local:
+        a: 1,
+        b: 9
+
+    Global:
+        window
+*/

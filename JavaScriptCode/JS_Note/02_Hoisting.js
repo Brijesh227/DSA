@@ -1,6 +1,6 @@
 // getName();                   //hello
 // getName2();                  //hello undefined
-// arrGetNameFunExpression();  //TypeError: arrGetNameFunExpression is not a function
+// arrGetNameFunExpression();   //TypeError: arrGetNameFunExpression is not a function
 // arrGetName();                //TypeError: arrGetName is not a function
 // arrGetName2();               //ReferenceError: Cannot access 'arrGetName2' before initialization
 // console.log(x);              //undefined
