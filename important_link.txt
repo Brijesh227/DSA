@@ -1,0 +1,32 @@
+1. https://www.youtube.com/@Java.Brains/playlists
+    -> Java
+    -> Spring Boot
+    -> Design pattern
+    -> OAuth and JWT
+
+2. InterviewBit - https://www.interviewbit.com/practice/
+
+3. Striver SDE Sheet - https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+
+4. Aditya Verma - https://www.youtube.com/@TheAdityaVerma
+
+5. Steps: 
+    -> 1. Clear basics
+    -> 2. Make notes (brut force to optimisation)
+    -> 3. Time and spaace complexity
+    -> 4. Revision of previous day at starting
+    -> 5. Planning for next
+    -> 6. Revision of learning on random day
+    -> 7. Set timer before starting
+
+6. Github repo:
+    -> https://github.com/ashishps1/awesome-leetcode-resources
+
+7. LintCode:
+    -> https://www.lintcode.com/problem (Leetcode premium alternative)
+
+8. Pepcoding:
+    -> https://www.youtube.com/@Pepcoding
+
+9. Luv:
+    -> https://www.youtube.com/@iamluv/playlists
