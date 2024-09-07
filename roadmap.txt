@@ -1,0 +1,13 @@
+7,8 sept -> time & space complexity
+
+Math basic
+    -> https://algo.monster/problems/math-basics
+    -> https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial/?ref=shm
+    -> https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/tutorial/
+
+9 to 15 sept 
+   -> Prefix sum 
+   -> Two pointer
+   -> Fast & slow pointer
+   -> sliding window
+   -> Top 'k' element

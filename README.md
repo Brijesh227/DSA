@@ -7,12 +7,15 @@ Welcome to the repository for programming resources and study strategies. This d
 ### 🎥 YouTube Channels
 
 1. **Time & Space Complexity & STL**
+   - My Code school: [MyCodeschool YouTube Channel](https://www.youtube.com/playlist?list=PL2_aWCzGMAwI9HK8YPVBjElbLbI3ufctn)
    - Luv: [Luv YouTube Channel](https://www.youtube.com/@iamluv/playlists)
 
 2. **DSA Resources**
    - **Aditya Verma**: [YouTube Channel](https://www.youtube.com/@TheAdityaVerma)
+   - **My Code school**: [YouTube Channel](https://www.youtube.com/@TheAdityaVerma)
    - **Pepcoding**: [YouTube Channel](https://www.youtube.com/@Pepcoding)
    - **WilliamFiset**: [YouTube Channel](https://youtube.com/@WilliamFiset-videos)
+   - **Striver SDE Sheet**[Striver SDE Sheet - Top Coding Interview Problems](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
 
 3. **Java Brains**
    - [Java Playlists](https://www.youtube.com/@Java.Brains/playlists)
@@ -26,16 +29,19 @@ Welcome to the repository for programming resources and study strategies. This d
 1. **InterviewBit**
    - [InterviewBit Practice](https://www.interviewbit.com/practice/)
 
-2. **Striver SDE Sheet**
-   - [Striver SDE Sheet - Top Coding Interview Problems](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
+2. **Geek For Geeks**
+   - [GeeksforGeeks](https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial)
 
-3. **LintCode (Leetcode Premium Alternative)**
+4. **LintCode (Leetcode Premium Alternative)**
    - [LintCode Problems](https://www.lintcode.com/problem)
 
 ### 📁 GitHub Repositories
 
 1. **Awesome Leetcode Resources**
    - [GitHub Repo](https://github.com/ashishps1/awesome-leetcode-resources)
+
+2. **Technical Interview Handbook**
+   - [GitHub Repo](https://github.com/yangshun/tech-interview-handbook)
 
 ## 📝 Study Plan
 
@@ -46,6 +52,10 @@ Welcome to the repository for programming resources and study strategies. This d
 5. **Planning for Next**: Strategically plan your study topics for future sessions.
 6. **Revision of Random Days**: Regularly review previously learned material to reinforce your knowledge.
 7. **Set Timer**: Use a timer to manage and optimize your study sessions effectively.
+
+## 📝 Blogs
+
+1. **How to start DSA**: https://blog.algomaster.io/p/how-i-mastered-data-structures-and-algorithms
 
 Feel free to explore the resources and follow the study plan to enhance your programming skills. Happy learning and coding!
 

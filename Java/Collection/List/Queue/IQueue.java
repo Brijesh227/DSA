@@ -1,3 +1,9 @@
+/**
+ * stack use stack class
+ * queue use Linklist class
+ * double ended queue use ArrayDeque class
+ */
+
 package Java.Collection.List.Queue;
 
 import java.util.*;
