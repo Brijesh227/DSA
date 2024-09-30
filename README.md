@@ -35,6 +35,9 @@ Welcome to the repository for programming resources and study strategies. This d
 4. **LintCode (Leetcode Premium Alternative)**
    - [LintCode Problems](https://www.lintcode.com/problem)
 
+5. **Work@tech**
+   - [DSA/Machine Coding](https://workat.tech/resources)
+
 ### 📁 GitHub Repositories
 
 1. **Awesome Leetcode Resources**

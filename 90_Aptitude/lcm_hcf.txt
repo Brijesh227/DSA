@@ -1,0 +1,12 @@
+LCM: least common multiple
+    -> Long division method:
+        2 | 8,12,6,4
+        2 | 4,6,3,2
+        2 | 2,3,3,1
+        3 | 1,3,3,1
+          | 1,1,1,1
+
+        ans = 2 * 2 * 2 * 3 = 24
+
+IMP: lcm (a,b) * gcd(a,b) = a * b
+

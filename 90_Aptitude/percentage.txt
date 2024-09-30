@@ -1,0 +1,10 @@
+// Formula
+
+1. x% of y = y% of x
+
+2. x is what percentage of y = (x/y)*100        // trick term with "of" is in denominator 
+    what percentage of x is y = (y/x)*100   
+
+3. x is what percentage more or less than y = ((x-y)/y) * 100
+    // trick term with "than" is in denominator and second term
+    // if answer in minus then less else more
