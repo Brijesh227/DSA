@@ -9,4 +9,13 @@ function sum(n){
     return sum(n);
 }
 
-console.log(sum(5));
+// console.log(sum(5));
+
+function improvedSum(n) {
+    if(n === 1){
+        return n;
+    }
+    return n + improvedSum(n-1);
+}
+
+console.log(improvedSum(10));
